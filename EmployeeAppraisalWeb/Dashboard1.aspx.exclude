@@ -1,0 +1,113 @@
+﻿<%@ Page Title="Dashboard" Language="C#" MasterPageFile="~/ClientFrame.master" AutoEventWireup="true" CodeFile="Dashboard1.aspx.cs" Inherits="EmployeeAppraisalWeb_ClientDashbord" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
+    <div class="col-md-12" style="border: 0px solid; margin-top: 10px; padding: 30px;">
+        <div class="row">
+            <div class="col-md-3 col-xs-12" style="border: 0px solid; float: right;">
+                <div class="col-md-12" style="border: 1px solid #808080; box-shadow: 0px 0px 10px #000000; font-size: 13px; padding-top: 20px; padding-bottom: 10px;">
+                    <div class="row col-md-12" style="padding: 0px;">
+                        <div class="col-md-7" style="padding-left: 20px; border: 0px solid;">
+                            <asp:Label ID="Label10" runat="server" Text="Skill"></asp:Label>
+                        </div>
+                        <div class="col-md-5" style="padding: 0px; border: 0px solid; margin-top: 5px;">
+                            <div class="progress" style="height: 10px;">
+                                <div class="progress-bar progress-bar-striped active" role="progressbar"
+                                    aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%;">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row col-md-12" style="padding: 0px;">
+                        <div class="col-md-7" style="padding-left: 20px; border: 0px solid;">
+                            <asp:Label ID="Label8" runat="server" Text="Quality"></asp:Label>
+                        </div>
+                        <div class="col-md-5" style="padding: 0px; border: 0px solid; margin-top: 5px;">
+                            <div class="progress" style="height: 10px;">
+                                <div class="progress-bar progress-bar-striped active" role="progressbar"
+                                    aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%;">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row col-md-12" style="padding: 0px;">
+                        <div class="col-md-7" style="padding-left: 20px; border: 0px solid;">
+                            <asp:Label ID="Label7" runat="server" Text="Avialability"></asp:Label>
+                        </div>
+                        <div class="col-md-5" style="padding: 0px; border: 0px solid; margin-top: 5px;">
+                            <div class="progress" style="height: 10px;">
+                                <div class="progress-bar progress-bar-striped active" role="progressbar"
+                                    aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%;">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row col-md-12" style="padding: 0px;">
+                        <div class="col-md-7" style="padding-left: 20px; border: 0px solid;">
+                            <asp:Label ID="Label6" runat="server" Text="Co-operation"></asp:Label>
+                        </div>
+                        <div class="col-md-5" style="padding: 0px; border: 0px solid; margin-top: 5px;">
+                            <div class="progress" style="height: 10px;">
+                                <div class="progress-bar progress-bar-striped active" role="progressbar"
+                                    aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%;">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row col-md-12" style="padding: 0px;">
+                        <div class="col-md-7" style="padding-left: 20px; border: 0px solid;">
+                            <asp:Label ID="Label5" runat="server" Text="Client FeedBack"></asp:Label>
+                        </div>
+                        <div class="col-md-5" style="padding: 0px; border: 0px solid; margin-top: 5px;">
+                            <div class="progress" style="height: 10px;">
+                                <div class="progress-bar progress-bar-striped active" role="progressbar"
+                                    aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%;">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="col-md-9" style="border: 0px solid;">
+                <div class="col-md-12" style="border: 1px solid #aaaaaa; height: 150px; margin-bottom: 30px; padding: 10px 15px 10px 15px;">
+                    <asp:Label ID="Label1" runat="server" Text="Project Manager" style="font-weight: bolder; color: #aaaaaa;"></asp:Label>
+                    <hr style="margin-top: 5px; margin-bottom: -3px; border: 1px dotted #aaaaaa;" />
+                    <hr style="margin-top: 5px; border: 1px dotted #aaaaaa;" />
+                    <div class="col-md-12">
+                        <div class="col-md-3" style="border: 1px dotted #aaaaaa;">eiw</div>
+                    </div>
+                </div>
+                <div class="col-md-12" style="border: 1px solid #aaaaaa; height: 150px; margin-bottom: 30px; padding: 10px 15px 10px 15px;">
+                    <asp:Label ID="Label2" runat="server" Text="Team Leader" style="font-weight: bolder; color: #aaaaaa;"></asp:Label>
+                </div>
+                <div class="col-md-12" style="border: 1px solid #aaaaaa; height: 150px; margin-bottom: 30px; padding: 10px 15px 10px 15px;">
+                    <asp:Label ID="Label3" runat="server" Text="Employee" style="font-weight: bolder; color: #aaaaaa;"></asp:Label>
+                </div>
+            </div>
+            <div class="col-md-3 col-xs-12" style="border: 0px solid; float: right;">
+                <div class="col-md-12" style="border: 1px solid #808080; font-size: 13px; padding-top: 20px; padding-bottom: 10px; margin-top: 30px;">
+                    <div class="row col-md-12" style="padding: 0px;">
+                        
+                    </div>
+                    <div class="row col-md-12" style="padding: 0px;">
+                        
+                    </div>
+                    <div class="row col-md-12" style="padding: 0px;">
+                        
+                    </div>
+                    <div class="row col-md-12" style="padding: 0px;">
+                        
+                    </div>
+                    <div class="row col-md-12" style="padding: 0px;">
+                        
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</asp:Content>
+

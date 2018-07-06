@@ -1,0 +1,9 @@
+string[] DOB=txtDOB.Value.Split('-');
+            DateTime DOBFinal = Convert.ToDateTime(DOB[2]+"-"+DOB[1]+"-"+DOB[0]);
+            string[] DOBFinalS = DOBFinal.ToString().Split('-');
+            string TYear = DOBFinalS[2].Substring(0,4);
+            if (Convert.ToInt32(TYear)>2005)
+            {
+                PanelAlert.Visible = true;
+                lblAlert.Text = "Age must be greater than 13 to Register.";
+            }

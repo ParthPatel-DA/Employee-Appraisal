@@ -1,0 +1,76 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="ClientFrameLogin.master.cs" Inherits="ClientFrame" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>TrackMyWork</title>
+    <!-- for-mobile-apps -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="Mercantile Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+    <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+		function hideURLbar(){ window.scrollTo(0,1); } </script>
+    <!-- //for-mobile-apps -->
+    <link href="Client_Temp/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="Client_Temp/css/style.css" rel="stylesheet" type="text/css" media="all" />
+    <!-- js -->
+    <link href="font-awesome-4.0.3/css/font-awesome.css" rel="stylesheet" />
+    <script type="text/javascript" src="Client_Temp/js/jquery-2.1.4.min.js"></script>
+    <!-- //js -->
+    <link href='//fonts.googleapis.com/css?family=Sanchez:400,400italic' rel='stylesheet' type='text/css' />
+    <link href='//fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css' />
+    <!-- start-smoth-scrolling -->
+    <script type="text/javascript" src="Client_Temp/js/move-top.js"></script>
+    <script type="text/javascript" src="Client_Temp/js/easing.js"></script>
+    <script type="text/javascript">
+        jQuery(document).ready(function ($) {
+            $(".scroll").click(function (event) {
+                event.preventDefault();
+                $('html,body').animate({ scrollTop: $(this.hash).offset().top }, 1000);
+            });
+        });
+    </script>
+    <!-- start-smoth-scrolling -->
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body style="background: url(css/img/Service/webDevelope.png) fixed; background-size: 100% 100%;">
+    <form id="form1" runat="server">
+        <!--navigation-->
+        <div class="top-nav">
+            <div class="container">
+                <nav class="navbar navbar-default">
+                    <div class="navbar-header navbar-left">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <h1 style="font-size: 30px;"><a class="navbar-brand" href="Default.aspx">TrackMyWork</a></h1>
+                    </div>
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
+                        <nav class="menu menu--shylock">
+                            <ul class="nav navbar-nav link-effect-7" id="link-effect-7">
+                                <li class="active"><a href="Default.aspx" data-hover="Home">Home</a></li>
+                                <li><a href="AboutUs.aspx" data-hover="About Us">About Us</a></li>
+                                <li><a href="Contactus.aspx" data-hover="Contact Us">Contact Us</a></li>
+                                <li><a href="PostProject.aspx" data-hover="Project Proposal">Project Proposal</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </nav>
+            </div>
+        </div>
+        <!--navigation-->
+
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        </asp:ContentPlaceHolder>
+
+    </form>
+</body>
+</html>

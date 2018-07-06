@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 18.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="32px"
+	 height="32px" viewBox="0 0 32 32" style="enable-background:new 0 0 32 32;" xml:space="preserve">
+<style type="text/css">
+	.st0{opacity:0;fill:#F6F6F6;}
+	.st1{fill:#656565;}
+	.st2{fill:#FFFFFF;}
+</style>
+<g id="Outline">
+	<path class="st0" d="M24,24H8V8h16V24z"/>
+</g>
+<g id="icon_x5F_bg">
+	<rect class="st1" width="32" height="32"/>
+</g>
+<g id="icon_x5F_fg">
+	<g>
+		<circle class="st2" cx="16" cy="9" r="5"/>
+		<path class="st1" d="M16.001,12C14.346,12,13,10.655,13,9.001C13,7.346,14.346,6,16,6s3,1.346,3,3.001
+			C19,10.655,17.654,12,16.001,12z"/>
+		<path class="st2" d="M19.2,16L16,19.143L12.8,16H8v12h16V16H19.2z"/>
+		<polygon class="st1" points="10,26 10,18 11.982,18 16,21.945 20.018,18 22,18 22,26 		"/>
+	</g>
+</g>
+<g id="not_x5F_bg">
+	<g>
+	</g>
+	<g>
+	</g>
+	<g>
+	</g>
+	<g>
+	</g>
+	<g>
+	</g>
+	<g>
+	</g>
+</g>
+</svg>

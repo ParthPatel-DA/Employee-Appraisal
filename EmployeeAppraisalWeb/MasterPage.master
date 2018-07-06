@@ -1,0 +1,205 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <style>
+        body {
+            padding: 0px;
+            margin: 0px;
+        }
+
+        * {
+            padding: 0px;
+            margin: 0px;
+        }
+    </style>
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <!-- for-mobile-apps -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="Mercantile Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+    <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+		function hideURLbar(){ window.scrollTo(0,1); } </script>
+    <!-- //for-mobile-apps -->
+    <link href="Client_Temp/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="Client_Temp/css/style.css" rel="stylesheet" type="text/css" media="all" />
+    <!-- js -->
+    <link href="font-awesome-4.0.3/css/font-awesome.css" rel="stylesheet" />
+    <script src="bootstrap/js/bootstrap.js"></script>
+    <script type="text/javascript" src="Client_Temp/js/jquery-2.1.4.min.js"></script>
+    <!-- //js -->
+    <link href='//fonts.googleapis.com/css?family=Sanchez:400,400italic' rel='stylesheet' type='text/css' />
+    <link href='//fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css' />
+    <!-- start-smoth-scrolling -->
+    <script type="text/javascript" src="Client_Temp/js/move-top.js"></script>
+    <script type="text/javascript" src="Client_Temp/js/easing.js"></script>
+    <script type="text/javascript">
+        jQuery(document).ready(function ($) {
+            $(".scroll").click(function (event) {
+                event.preventDefault();
+                $('html,body').animate({ scrollTop: $(this.hash).offset().top }, 1000);
+            });
+        });
+    </script>
+    <style>
+        .dropbtn {
+            float: right;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            right: 0;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+            .dropdown-content a {
+                color: black;
+                padding: 12px 16px;
+                text-decoration: none;
+                display: block;
+            }
+
+                .dropdown-content a:hover {
+                    background-color: #f1f1f1;
+                }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown:hover .dropbtn {
+        }
+
+        .lnkViewTask {
+            margin-top: 10px;
+            border: 1px solid #808080;
+            border-width: 0px 0px 0px 7px;
+            border-left-color: #e6cb29;
+            background: #fff;
+            padding: 2px;
+            font-size: 13px;
+            padding-left: 10px;
+            padding-right: 10px;
+            color: black;
+        }
+
+            .lnkViewTask:hover {
+                background: #efefef;
+            }
+    </style>
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+
+        <div>
+            <div class="col-md-12" style="background-color: #008BFF; font-size: 40px; color: #fff; padding: 10px 10px 0px 10px;">
+                <div class="col-md-8">TrackMyWork</div>
+                <div class="col-md-4">
+                    <%--<div class="col-md-6"></div>--%>
+                    <div class="col-md-2" style="font-size: 20px; padding-top: 15px;">
+                        <asp:LinkButton ID="lnkDB" runat="server" Style="color: #fff; text-decoration: none;" OnClick="lnkDB_Click"><i class="glyphicon glyphicon-dashboard"></i></asp:LinkButton>
+                    </div>
+                    <div class="col-md-2 dropdown" style="font-size: 20px; padding-top: 15px;">
+                        <i class="glyphicon glyphicon-bell dropbtn" style="padding-bottom: 36px;"></i>
+                        <div class="dropdown-content" style="margin-top: 55px; left: 0; width: 300px;">
+                            <asp:Repeater ID="rptNotify" runat="server" OnItemCommand="rptNotify_ItemCommand">
+                                <ItemTemplate>
+                                    <asp:LinkButton ID="lnkRead" runat="server" Style="font-size: 15px; border-bottom: 1px solid #e6cb29;" CommandName="Read" CommandArgument='<%# Eval("NotificationID") %>'>
+                                                <b><%# Eval("Title")%></b><br />
+                                                <%# Eval("Description")%>
+                                                <%--<hr style="border-color: #f2e2e2; margin-top: 8px; margin-bottom: -4px;" />--%>
+                                    </asp:LinkButton>
+                                </ItemTemplate>
+                            </asp:Repeater>
+                        </div>
+                        <%--<ul class="" style="margin-top: 55px; left: 0;">
+                            <li style="list-style: none;">
+                                <asp:LinkButton ID="LinkButton3" runat="server" CommandName="View" CommandArgument='<%# Eval("ModuleID") %>'><i class="icon-eye-open"></i>Open</asp:LinkButton></li>
+                            <li style="list-style: none;">
+                                <asp:LinkButton ID="LinkButton4" runat="server" CommandName="OpenPanelViewTask" CommandArgument='<%# Eval("ModuleID") %>'><i class="icon-eye-open"></i>View Task</asp:LinkButton></li>
+                            <li style="list-style: none;">
+                                <asp:LinkButton ID="LinkButton5" runat="server" CommandName="EditModuleName" CommandArgument='<%# Eval("ModuleID") %>'><i class="icon-pencil"></i>Edit Title</asp:LinkButton></li>
+                            <li style="list-style: none;">
+                                <asp:LinkButton ID="LinkButton6" runat="server" CommandName="OpenPanelAddTask" CommandArgument='<%# Eval("ModuleID") %>'><i class="icon-plus"></i>Add Task</asp:LinkButton></li>
+                            <li style="list-style: none;">
+                                <asp:LinkButton ID="LinkButton7" runat="server" CommandName="DeleteModule" CommandArgument='<%# Eval("ModuleID") %>'><i class="icon-trash"></i>Delete</asp:LinkButton></li>
+                        </ul>--%>
+                    </div>
+                    <div class="col-md-2 dropdown" style="font-size: 20px; padding-top: 15px;">
+                        <i class="glyphicon glyphicon-envelope dropbtn" style="padding-bottom: 36px;"></i>
+                        <div class="dropdown-content" style="margin-top: 55px; left: 0; width: 300px; margin-left: -45px; padding-bottom: 20px;">
+                            <div id="divMsg" runat="server" visible="true">
+                                <asp:Repeater ID="rptMSg" runat="server" OnItemCommand="rptMSg_ItemCommand">
+                                    <ItemTemplate>
+                                        <asp:LinkButton ID="lnkRead" runat="server" Style="font-size: 15px; border-bottom: 1px solid #e6cb29;" CommandName="Read" CommandArgument='<%# Eval("MessegeID") %>'>
+                                            <asp:HiddenField ID="hdnSender" runat="server" Value='<%# Eval("SenderID") %>' />
+                                            <b>
+                                                <asp:Literal ID="ltrName" runat="server"></asp:Literal></b><br />
+                                            <%# Eval("Subject") %>
+                                            <%--<hr style="border-color: #f2e2e2; margin-top: 8px; margin-bottom: -4px;" />--%>
+                                        </asp:LinkButton>
+                                    </ItemTemplate>
+                                </asp:Repeater>
+                                <hr style="border-color: #f2e2e2; border: 2px solid #008BFF; margin-top: 8px; margin-bottom: 10px;" />
+                                <asp:Repeater ID="rptEmpMsgList" runat="server" OnItemCommand="rptEmpMsgList_ItemCommand">
+                                    <ItemTemplate>
+                                        <asp:LinkButton ID="lnkRead" runat="server" Style="font-size: 15px; border-bottom: 1px solid #e6cb29;" CommandName="Read" CommandArgument='<%# Eval("EmpID") %>'>
+                                        <b><%# Eval("FirstName") + " " + Eval("LastName") %></b><br />
+                                        <%--<hr style="border-color: #f2e2e2; margin-top: 8px; margin-bottom: -4px;" />--%>
+                                        </asp:LinkButton>
+                                    </ItemTemplate>
+                                </asp:Repeater>
+                            </div>
+                            <div id="divMsgDetail" runat="server" visible="false" style="color: #aaaaaa; padding-top: 20px;">
+                                <div class="col-md-12">
+                                    <center><asp:Image ID="imgEmp" CssClass="img-circle" runat="server" Width="100px" Height="100px" /></center>
+                                </div>
+                                <div class="col-md-12 text-center" style="margin-top: 10px; color: #e6cb29; font-size: 30px;">
+                                    <asp:Literal ID="ltrEmpName" runat="server"></asp:Literal>
+                                </div>
+                                <div class="col-md-12" style="padding: 15px; font-size: 15px; color: #808080;">
+                                    <div class="col-md-12" style="padding: 0px; font-size: 18px; font-weight: bolder;"><asp:Literal ID="ltrSubject" runat="server"></asp:Literal></div>
+                                    <div class="col-md-12 text-justify" style="padding: 0px;"><asp:Literal ID="ltrDesc" runat="server"></asp:Literal></div>
+                                    
+
+                                </div>
+                                <hr style="border-color: #f2e2e2; border: 2px solid #008BFF; margin-top: 8px; margin-bottom: 10px;" />
+                                <div class="col-md-12">
+                                    <asp:TextBox ID="txtSubject" CssClass="form-control" runat="server" style="margin-top: 15px;" placeholder="Subject"></asp:TextBox>
+                                    <asp:TextBox ID="txtMSg" CssClass="form-control" runat="server" TextMode="MultiLine" style="margin-top: 15px; height: 100px; max-height: 100px; max-width: 100%;" placeholder="Message"></asp:TextBox>
+                                    <asp:Button ID="btnMsg" CssClass="form-control btn btn-success" runat="server" Text="Send Message" style="margin-top: 15px;  margin-bottom: 0px;" OnClick="btnMsg_Click" />
+                                    <asp:Button ID="btnClose" CssClass="form-control btn btn-danger" runat="server" Text="Cancel Message" style="margin-top: 10px;  margin-bottom: 0px;" OnClick="btnClose_Click" Visible="false" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-2" style="font-size: 15px; padding-top: 18px; font-weight: bolder; padding-left: 30px; border: 0px solid;">
+                        <asp:ImageButton ID="imgbtnProfile" class="img-circle" runat="server" PostBackUrl="~/EmployeeProfile.aspx" style="margin-top: -10px;" Width="40px" Height="40px" />
+                    </div>
+                    <div class="col-md-2" style="font-size: 15px; padding-top: 18px; font-weight: bolder; padding-left: 50px;">
+                        <asp:LinkButton ID="lnkLogout" runat="server" Style="color: #fff; text-decoration: none;" OnClick="lnkLogout_Click">Logout</asp:LinkButton>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-md-12 container-fluid" style="padding: 0px;">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+        </div>
+    </form>
+</body>
+</html>

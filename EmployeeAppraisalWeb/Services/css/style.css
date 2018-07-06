@@ -1,0 +1,118 @@
+/*--
+Author: W3layouts
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+--*/
+
+
+/*-- //Bubble Float Top --*/
+
+
+/*-- products --*/
+/******** SAP ************/
+
+/*-- services --*/
+.services-list {
+    padding: 90px 0;
+}
+.services-gds{
+	margin-top:55px;
+}
+.list-gds span{
+	color:#008BFF;
+	font-size:30px;
+}
+.list-gds:nth-child(2),.list-gds:nth-child(5){
+	border-left:1px solid #008BFF;
+	border-right:1px solid #008BFF;
+}
+.list-gds:nth-child(6),.list-gds:nth-child(4),.list-gds:nth-child(5){
+	border-top:1px solid #008BFF;
+}
+/*.list-gds:nth-child(9),.list-gds:nth-child(7),.list-gds:nth-child(8){
+	border-top:1px solid #008BFF;*/
+}
+.list-gds p {
+    font-size: 14px;
+    line-height: 2.2em;
+    color: #464646;
+}
+.list-gds h4 {
+    color: #000;
+    font-size: 26px;
+    margin: 25px 0 27px;
+}
+.list-gds {
+    padding: 60px 16px;
+		transition:0.5s all;
+	-webkit-transition:0.5s all;
+	-moz-transition:0.5s all;
+	-o-transition:0.5s all;
+	-ms-transition:0.5s all;
+}
+.list-gds-1:hover {
+    background: url('../../../img/Service/webDevelopement.png') no-repeat center;
+}
+.list-gds-2:hover{
+    background: url('../../../img/Service/mobileapp.jpg') no-repeat center;
+}
+..list-gds-3:hover{
+    background: url('../../../img/Service/graphicdesign.jpg') no-repeat center;
+}
+.list-gds-4:hover{
+    background: url('../../../img/Service/translate.jpg') no-repeat center;
+}
+.list-gds-5:hover{
+    background: url('../../../img/Service/DataEntry.jpg') no-repeat center;
+}
+.list-gds-6:hover{
+    background: url('../../../img/Service/reporting.jpg') no-repeat center;
+}
+
+.list-gds:hover{
+    background-size: cover;
+    -webkit-background-size: cover;
+    -o-background-size: cover;
+    -ms-background-size: cover;
+    -moz-background-size: cover;
+	transition:0.5s all;
+	-webkit-transition:0.5s all;
+	-moz-transition:0.5s all;
+	-o-transition:0.5s all;
+	-ms-transition:0.5s all;	
+}
+.list-gds:hover.list-gds h4{
+	color:#fff;
+		transition:0.5s all;
+	-webkit-transition:0.5s all;
+	-moz-transition:0.5s all;
+	-o-transition:0.5s all;
+	-ms-transition:0.5s all;
+}
+.list-gds:hover.list-gds p{
+	color:#fff;
+		transition:0.5s all;
+	-webkit-transition:0.5s all;
+	-moz-transition:0.5s all;
+	-o-transition:0.5s all;
+	-ms-transition:0.5s all;
+}
+.list-services{
+}
+.list-services h4{
+    color: #000;
+    font-size: 24px;
+    padding: 60px 16px;
+}
+.list-services img{
+    height:100px;
+    width:100px;
+}
+.list-box{
+
+}
+.list-box:hover{
+    box-shadow:10px 5px inset;
+}
+

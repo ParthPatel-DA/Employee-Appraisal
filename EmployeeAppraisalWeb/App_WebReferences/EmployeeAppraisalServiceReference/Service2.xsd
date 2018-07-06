@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ArrayOftblEmployee">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="tblEmployee" nillable="true" type="tns:tblEmployee" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOftblEmployee" nillable="true" type="tns:ArrayOftblEmployee" />
+  <xs:complexType name="tblEmployee">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Address" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CityID" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="ContactNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CreatedBy" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="CreatedOn" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="DOB" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="EmailID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EmpID" type="xs:int" />
+      <xs:element minOccurs="0" name="FirstName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Gender" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="IsActive" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsVerify" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsVerifyByAdmin" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Landmark" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LastName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ModifyOn" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Password" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ProfilePic" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="VerifyCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Zipcode" nillable="true" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="tblEmployee" nillable="true" type="tns:tblEmployee" />
+  <xs:complexType name="ArrayOftblModule">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="tblModule" nillable="true" type="tns:tblModule" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOftblModule" nillable="true" type="tns:ArrayOftblModule" />
+  <xs:complexType name="tblModule">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AssignDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="CreatedBy" type="xs:int" />
+      <xs:element minOccurs="0" name="CreatedOn" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="DeadlineDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsActive" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsComplete" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="ModuleID" type="xs:int" />
+      <xs:element minOccurs="0" name="Priority" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="ProjectID" type="xs:int" />
+      <xs:element minOccurs="0" name="Risk" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="State" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="SubmitionDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="TaskFile" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Title" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="tblModule" nillable="true" type="tns:tblModule" />
+  <xs:complexType name="ArrayOftblProject">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="tblProject" nillable="true" type="tns:tblProject" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOftblProject" nillable="true" type="tns:ArrayOftblProject" />
+  <xs:complexType name="tblProject">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AssignBy" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="AssignDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="CategoryID" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="ClientID" type="xs:int" />
+      <xs:element minOccurs="0" name="CreatedBy" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="CreatedOn" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="DeadlineDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Image" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsActive" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsComplete" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsHome" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="LanguageID" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="ManagerID" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="ProjectID" type="xs:int" />
+      <xs:element minOccurs="0" name="Title" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="tblProject" nillable="true" type="tns:tblProject" />
+  <xs:complexType name="tblClient">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Address" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CityID" type="xs:int" />
+      <xs:element minOccurs="0" name="ClientID" type="xs:int" />
+      <xs:element minOccurs="0" name="ClientName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CompanyName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ContactNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CreatedBy" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="CreatedOn" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="EmailID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ImageName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsActive" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Landmark" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Password" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="WebsiteURL" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Zipcode" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="tblClient" nillable="true" type="tns:tblClient" />
+  <xs:complexType name="ArrayOftblSkill">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="tblSkill" nillable="true" type="tns:tblSkill" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOftblSkill" nillable="true" type="tns:ArrayOftblSkill" />
+  <xs:complexType name="tblSkill">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CreatedBy" type="xs:int" />
+      <xs:element minOccurs="0" name="CreatedOn" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="SkillID" type="xs:int" />
+      <xs:element minOccurs="0" name="SkillName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SuperSkill" nillable="true" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="tblSkill" nillable="true" type="tns:tblSkill" />
+  <xs:complexType name="ArrayOftblAdmin">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="tblAdmin" nillable="true" type="tns:tblAdmin" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOftblAdmin" nillable="true" type="tns:ArrayOftblAdmin" />
+  <xs:complexType name="tblAdmin">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AdminID" type="xs:int" />
+      <xs:element minOccurs="0" name="ContactNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CreatedBy" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="CreatedOn" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="EmailID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FirstName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Image" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsActive" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsDelete" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsInsert" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsSuper" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsUpdate" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="LastName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Password" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="tblAdmin" nillable="true" type="tns:tblAdmin" />
+  <xs:complexType name="ArrayOftblCM">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="tblCM" nillable="true" type="tns:tblCM" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOftblCM" nillable="true" type="tns:ArrayOftblCM" />
+  <xs:complexType name="tblCM">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CMSID" type="xs:int" />
+      <xs:element minOccurs="0" name="Content" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CreatedBY" type="xs:int" />
+      <xs:element minOccurs="0" name="CreatedOn" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="IsActive" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="ModifyOn" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Title" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="tblCM" nillable="true" type="tns:tblCM" />
+  <xs:complexType name="ArrayOftblInquiry">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="tblInquiry" nillable="true" type="tns:tblInquiry" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOftblInquiry" nillable="true" type="tns:ArrayOftblInquiry" />
+  <xs:complexType name="tblInquiry">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ContactNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CreatedOn" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EmailID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="InquiryID" type="xs:int" />
+      <xs:element minOccurs="0" name="IsRead" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="tblInquiry" nillable="true" type="tns:tblInquiry" />
+  <xs:complexType name="ArrayOftblPostProject">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="tblPostProject" nillable="true" type="tns:tblPostProject" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOftblPostProject" nillable="true" type="tns:ArrayOftblPostProject" />
+  <xs:complexType name="tblPostProject">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CategoryID" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="ClientID" type="xs:int" />
+      <xs:element minOccurs="0" name="ContentUpload" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CreateOn" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="CreatedBy" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="DeadlineDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsAssign" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="LanguageID" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="ProjectID" type="xs:int" />
+      <xs:element minOccurs="0" name="Title" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="tblPostProject" nillable="true" type="tns:tblPostProject" />
+  <xs:complexType name="ArrayOftblClient">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="tblClient" nillable="true" type="tns:tblClient" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOftblClient" nillable="true" type="tns:ArrayOftblClient" />
+  <xs:complexType name="ArrayOftblLanguage">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="tblLanguage" nillable="true" type="tns:tblLanguage" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOftblLanguage" nillable="true" type="tns:ArrayOftblLanguage" />
+  <xs:complexType name="tblLanguage">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CategoryID" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="CreatedBy" type="xs:int" />
+      <xs:element minOccurs="0" name="CreatedOn" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="LanguageID" type="xs:int" />
+      <xs:element minOccurs="0" name="LanguageName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SuperID" nillable="true" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="tblLanguage" nillable="true" type="tns:tblLanguage" />
+  <xs:complexType name="ArrayOftblCategory">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="tblCategory" nillable="true" type="tns:tblCategory" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOftblCategory" nillable="true" type="tns:ArrayOftblCategory" />
+  <xs:complexType name="tblCategory">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CategoryID" type="xs:int" />
+      <xs:element minOccurs="0" name="CategoryName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CreatedBy" type="xs:int" />
+      <xs:element minOccurs="0" name="CreatedOn" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="SuperID" nillable="true" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="tblCategory" nillable="true" type="tns:tblCategory" />
+  <xs:complexType name="ArrayOftblCountry">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="tblCountry" nillable="true" type="tns:tblCountry" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOftblCountry" nillable="true" type="tns:ArrayOftblCountry" />
+  <xs:complexType name="tblCountry">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CountryCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ID" type="xs:int" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="tblCountry" nillable="true" type="tns:tblCountry" />
+  <xs:complexType name="ArrayOftblState">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="tblState" nillable="true" type="tns:tblState" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOftblState" nillable="true" type="tns:ArrayOftblState" />
+  <xs:complexType name="tblState">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CountryID" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="ID" type="xs:int" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="tblState" nillable="true" type="tns:tblState" />
+  <xs:complexType name="ArrayOftblCity">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="tblCity" nillable="true" type="tns:tblCity" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOftblCity" nillable="true" type="tns:ArrayOftblCity" />
+  <xs:complexType name="tblCity">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ID" type="xs:int" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StateID" nillable="true" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="tblCity" nillable="true" type="tns:tblCity" />
+  <xs:complexType name="ArrayOftblTask">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="tblTask" nillable="true" type="tns:tblTask" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOftblTask" nillable="true" type="tns:ArrayOftblTask" />
+  <xs:complexType name="tblTask">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AssignDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="CreatedBy" type="xs:int" />
+      <xs:element minOccurs="0" name="CreatedOn" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="DeadlineDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsActive" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsComplete" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="ModuleID" type="xs:int" />
+      <xs:element minOccurs="0" name="Priority" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="Risk" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="State" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="SubmitionDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="SubmittedFile" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TaskFille" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TaskID" type="xs:int" />
+      <xs:element minOccurs="0" name="Title" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="tblTask" nillable="true" type="tns:tblTask" />
+</xs:schema>

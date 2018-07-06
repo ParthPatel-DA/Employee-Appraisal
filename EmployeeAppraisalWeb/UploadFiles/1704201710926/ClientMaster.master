@@ -1,0 +1,193 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="ClientMaster.master.cs" Inherits="ClientMaster" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    
+    <!-- for-mobile-apps -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="Mercantile Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+    <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+		function hideURLbar(){ window.scrollTo(0,1); } </script>
+    <!-- //for-mobile-apps -->
+    <link href="Client_Temp/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="Client_Temp/css/style.css" rel="stylesheet" type="text/css" media="all" />
+    <!-- js -->
+    <link href="font-awesome-4.0.3/css/font-awesome.css" rel="stylesheet" />
+    <script src="bootstrap/js/bootstrap.js"></script>
+    <script type="text/javascript" src="Client_Temp/js/jquery-2.1.4.min.js"></script>
+    <!-- //js -->
+    <link href='//fonts.googleapis.com/css?family=Sanchez:400,400italic' rel='stylesheet' type='text/css' />
+    <link href='//fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css' />
+    <!-- start-smoth-scrolling -->
+    <script type="text/javascript" src="Client_Temp/js/move-top.js"></script>
+    <script type="text/javascript" src="Client_Temp/js/easing.js"></script>
+    <script type="text/javascript">
+        jQuery(document).ready(function ($) {
+            $(".scroll").click(function (event) {
+                event.preventDefault();
+                $('html,body').animate({ scrollTop: $(this.hash).offset().top }, 1000);
+            });
+        });
+    </script>
+    <!-- start-smoth-scrolling -->
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form method="post" runat="server">
+        <!--navigation-->
+        <div class="top-nav">
+            <div class="container">
+                <nav class="navbar navbar-default">
+                    <div class="navbar-header navbar-left">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <h1><a class="navbar-brand" href="Default.aspx">TrackMyWork</a></h1>
+                    </div>
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
+                        <nav class="menu menu--shylock">
+                            <ul class="nav navbar-nav link-effect-7" id="link-effect-7">
+                                <li class="Default.aspx"><a href="Default.aspx" data-hover="Home">Home</a></li>
+                                <li><a href="AboutUs.aspx" data-hover="About Us">About Us</a></li>
+                                <li><a href="Contactus.aspx" data-hover="Contact Us">Contact Us</a></li>
+                                <li><a href="PostProject.aspx" data-hover="Post Project">Post Project</a></li>
+                                <li><asp:LinkButton ID="lnkTrackProject" runat="server" data-hover="TrackProject" OnClick="lnkTrackProject_Click" >TrackProject</asp:LinkButton></li>
+                                <li><asp:LinkButton ID="lnkLogin" runat="server" data-hover="Login" OnClick="lnkLogin_Click">Login</asp:LinkButton></li>
+                                <li><asp:LinkButton ID="lnkLogout" runat="server" data-hover="Logout" OnClick="lnkLogout_Click">Logout</asp:LinkButton></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </nav>
+            </div>
+        </div>
+        <!--navigation-->
+
+        <%--<!-- banner -->
+        <div class="banner">
+            <div class="w3l_banner_info">
+                <div class="container">
+                    <section class="slider">
+                        <div class="flexslider">
+                            <ul class="slides">
+                                <li>
+                                    <div class="w3l_banner_info_grid">
+                                        <h3>a satisfied customer is the best business strategy of all</h3>
+                                        <p>Nullam faucibus felis enim, id blandit magna mattis ac. Sed suscipit a dolor.</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="w3l_banner_info_grid">
+                                        <h3>always deliver more than expected</h3>
+                                        <p>Nullam faucibus felis enim, id blandit magna mattis ac. Sed suscipit a dolor.</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="w3l_banner_info_grid">
+                                        <h3>leadership is the capacity to translate vision into reality</h3>
+                                        <p>Nullam faucibus felis enim, id blandit magna mattis ac. Sed suscipit a dolor.</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </section>
+                    <!-- flexSlider -->
+                    <link rel="stylesheet" href="Client_Temp/css/flexslider.css" type="text/css" media="screen" property="" />
+                    <script src="Client_Temp/js/jquery.flexslider.js"></script>
+                    <script type="text/javascript">
+                        $(window).load(function () {
+                            $('.flexslider').flexslider({
+                                animation: "slide",
+                                start: function (slider) {
+                                    $('body').removeClass('loading');
+                                }
+                            });
+                        });
+                    </script>
+                    <!-- //flexSlider -->
+                </div>
+            </div>
+        </div>
+        <!-- //banner -->--%>
+
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        </asp:ContentPlaceHolder>
+
+        <!-- footer -->
+        <div class="footer">
+            <div class="container">
+                <div class="agileinfo_footer_grids">
+                    <div class="col-md-4 agileinfo_footer_grid">
+                        <h2 style="color:#008BFF;">TrackMyWork</h2>
+                        <p>
+                            “TrackMyWork” is a user-friendly web application in witch clients can give diffrent types of project requirments.
+                            Clients can have the facility of project tracking and see the status of project.
+                        </p>
+                        <%--<ul class="social-icons">
+                            <li><a href="#" class="icon-button twitter"><i class="icon-twitter"></i><span></span></a></li>
+                            <li><a href="#" class="icon-button google"><i class="icon-google"></i><span></span></a></li>
+                            <li><a href="#" class="icon-button v"><i class="icon-v"></i><span></span></a></li>
+                            <li><a href="#" class="icon-button pinterest"><i class="pinterest"></i><span></span></a></li>
+                        </ul>--%>
+                    </div>
+                    <div class="col-md-4 agileinfo_footer_grid">
+                        <h3>Contact Info</h3>
+                        <ul class="agileinfo_footer_grid_list">
+                            <li><i class="glyphicon glyphicon-map-marker" aria-hidden="true"></i>Bhagyoday Socity,Palanpur Patia,<span>Rander Road,Surat 395009</span></li>
+                            <li><i class="glyphicon glyphicon-envelope" aria-hidden="true"></i><a href="mailto:trackmyworkindia@gmail.com">trackmyworkindia@gmail.com</a></li>
+                            <li><i class="glyphicon glyphicon-earphone" aria-hidden="true"></i>+918469520590</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4 agileinfo_footer_grid">
+                        <h3>Navigation</h3>
+                        <ul class="agileinfo_footer_grid_nav">
+                            <li><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span><a href="Default.aspx">Home</a></li>
+                            <li><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span><a href="Services.aspx">Services</a></li>
+                            <li><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span><a href="Aboutus.aspx">About Us</a></li>
+                            <li><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span><a href="Postproject.aspx">Post Project</a></li>
+                            <li><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span><a href="Contactus.aspx">Contact Us</a></li>
+                            <li><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span><a href="FeedBack.aspx">FeedBack</a></li>
+                        </ul>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="w3agile_footer_copy">
+                    <p>&copy; 2017 TrackMyWork. All rights reserved | Design by <a href="http://w3layouts.com/">Renown Infosys</a></p>
+                </div>
+            </div>
+        </div>
+        <!-- //footer -->
+
+        <!-- for bootstrap working -->
+        <script src="js/bootstrap.js"></script>
+        <!-- //for bootstrap working -->
+        <!-- here stars scrolling icon -->
+        <script type="text/javascript">
+            $(document).ready(function () {
+                /*
+                    var defaults = {
+                    containerID: 'toTop', // fading element id
+                    containerHoverID: 'toTopHover', // fading element hover id
+                    scrollSpeed: 1200,
+                    easingType: 'linear' 
+                    };
+                */
+
+                $().UItoTop({ easingType: 'easeOutQuart' });
+
+            });
+        </script>
+        <!-- //here ends scrolling icon -->
+    </form>
+</body>
+</html>

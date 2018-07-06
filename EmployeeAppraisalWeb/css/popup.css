@@ -1,0 +1,295 @@
+#popup {
+	width: 50%;
+	height: auto;
+	border: 1px solid white;
+	background-color: white;
+	top: 20%;
+	position: fixed;
+	margin: 0 auto;
+	left: 25%;
+	background: #FFFFFF;
+	border: 1px solid rgba(147, 184, 189,0.8);
+	-webkit-box-shadow: 0pt 2px 5px rgba(105, 108, 109,  0.7), 0px 0px 8px 5px rgba(208, 223, 226, 0.4) inset;
+	-moz-box-shadow: 0pt 2px 5px rgba(105, 108, 109,  0.7), 0px 0px 8px 5px rgba(208, 223, 226, 0.4) inset;
+	box-shadow: 0pt 2px 5px rgba(105, 108, 109,  0.7), 0px 0px 8px 5px rgba(208, 223, 226, 0.4) inset;
+	-webkit-box-shadow: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	opacity: 1;
+}
+
+#overlay_signup {
+	position: fixed;
+	top: 0px;
+	visibility: hidden;
+	background-color: rgba(74,74,74,0.75);
+	opacity: 1;
+	left: 0px;
+	height: 100%;
+	width: 100%;
+	/*text-align: center;*/
+	z-index: 99;/*background:transparent;*/
+            
+}
+#overlay_signup:target {
+	visibility: visible;
+	-webkit-animation: fade 400ms ease;
+}
+#overlay_signup:target > #popup {
+	-webkit-animation: moveFromBottom 400ms ease;
+}
+#overlay_signup_view {
+	position: fixed;
+	top: 0px;
+	visibility: hidden;
+	background-color: rgba(74,74,74,0.75);
+	opacity: 1;
+	left: 0px;
+	height: 100%;
+	width: 100%;
+	/*text-align: center;*/
+	z-index: 99;/*background:transparent;*/
+            
+}
+#overlay_signup_view:target {
+	visibility: visible;
+	-webkit-animation: fade 400ms ease;
+}
+#overlay_signup_view:target > #popup {
+	-webkit-animation: moveFromBottom 400ms ease;
+}
+
+#overlay_signup_task {
+	position: fixed;
+	top: 0px;
+	visibility: hidden;
+	background-color: rgba(74,74,74,0.75);
+	opacity: 1;
+	left: 0px;
+	height: 100%;
+	width: 100%;
+	/*text-align: center;*/
+	z-index: 99;/*background:transparent;*/
+            
+}
+#overlay_signup_task:target {
+	visibility: visible;
+	-webkit-animation: fade 400ms ease;
+}
+#overlay_signup_task:target > #popup {
+	-webkit-animation: moveFromBottom 400ms ease;
+}
+
+#overlay_signup_team {
+	position: fixed;
+	top: 0px;
+	visibility: hidden;
+	background-color: rgba(74,74,74,0.75);
+	opacity: 1;
+	left: 0px;
+	height: 100%;
+	width: 100%;
+	/*text-align: center;*/
+	z-index: 99;/*background:transparent;*/
+            
+}
+#overlay_signup_team:target {
+	visibility: visible;
+	-webkit-animation: fade 400ms ease;
+}
+#overlay_signup_team:target > #popup {
+	-webkit-animation: moveFromBottom 400ms ease;
+}
+
+#overlay_signup_AssTask {
+	position: fixed;
+	top: 0px;
+	visibility: hidden;
+	background-color: rgba(74,74,74,0.75);
+	opacity: 1;
+	left: 0px;
+	height: 100%;
+	width: 100%;
+	/*text-align: center;*/
+	z-index: 99;/*background:transparent;*/
+            
+}
+#overlay_signup_AssTask:target {
+	visibility: visible;
+	-webkit-animation: fade 400ms ease;
+}
+#overlay_signup_AssTask:target > #popup {
+	-webkit-animation: moveFromBottom 400ms ease;
+}
+
+#overlay {
+	position: fixed;
+	top: 0px;
+	visibility: hidden;
+	background-color: rgba(74,74,74,0.75);
+	opacity: 1;
+	left: 0px;
+	height: 100%;
+	width: 100%;
+	text-align: center;
+	z-index: 99;/*background:transparent;*/
+			
+}
+#overlay:target {
+	visibility: visible;
+	-webkit-animation: fade 400ms ease;
+}
+#overlay:target > #popup {
+	-webkit-animation: moveFromBottom 400ms ease;
+}
+ @-webkit-keyframes fade {
+ from {
+ opacity: 0;
+}
+to {
+	opacity: 1;
+}
+}
+ @-webkit-keyframes moveFromBottom {
+ from {
+ -webkit-transform: scale(.5);
+ opacity: 0;
+}
+to {
+	-webkit-transform: scale(1);
+	opacity: 1;
+}
+}
+ @-moz-keyframes fade {
+ from {
+ opacity: 0;
+}
+to {
+	opacity: 1;
+}
+}
+ @-moz-keyframes moveFromBottom {
+ from {
+ -webkit-transform: scale(.5);
+ opacity: 0;
+}
+to {
+	-webkit-transform: scale(1);
+	opacity: 1;
+}
+}
+ @-ms-keyframes fade {
+ from {
+ opacity: 0;
+}
+to {
+	opacity: 1;
+}
+}
+ @-ms-keyframes moveFromBottom {
+ from {
+ -webkit-transform: scale(.5);
+ opacity: 0;
+}
+to {
+	-webkit-transform: scale(1);
+	opacity: 1;
+}
+}
+ @-o-keyframes fade {
+ from {
+ opacity: 0;
+}
+to {
+	opacity: 1;
+}
+}
+ @-o-keyframes moveFromBottom {
+ from {
+ -webkit-transform: scale(.5);
+ opacity: 0;
+}
+to {
+	-webkit-transform: scale(1);
+	opacity: 1;
+}
+}
+ @keyframes fade {
+ from {
+ opacity: 0;
+}
+to {
+	opacity: 1;
+}
+}
+ @keyframes moveFromBottom {
+ from {
+ -webkit-transform: scale(.5);
+ opacity: 0;
+}
+to {
+	-webkit-transform: scale(1);
+	opacity: 1;
+}
+}
+.login {
+	padding: 30px;
+	margin-top: 30px;
+}
+.login label {
+	font-size: 25px;
+	font-family: sans-serif;
+	color: #fff;
+}
+.login .input {
+	display: inline;
+	font-family: "Helvetica Neue", Arial, sans-serif;
+	border-style: solid;
+	border-width: 1px;
+	border-color: #dedede;
+	font-size: 1.55em;
+	padding: 11px 25px;
+	padding-left: 55px;
+	width: 300px;
+	color: #777;
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1) inset;
+	-moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1) inset;
+	-webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1) inset;
+}
+#submitbtn {
+	height: 2em;
+	padding: 0 1em;
+	border: 1px solid;
+	outline: 0;
+	font-weight: bold;
+	font-size: 1.3em;
+	color: #fff;
+	text-shadow: 0px 1px 0px #222;
+	white-space: nowrap;
+	word-wrap: normal;
+	vertical-align: middle;
+	cursor: pointer;
+	-moz-border-radius: 2px;
+	-webkit-border-radius: 2px;
+	border-radius: 2px;
+	border-color: #030a03 #071807 #000;
+	-moz-box-shadow: inset 0 1px 0 rgba(256,256,256, .35);
+	-ms-box-shadow: inset 0 1px 0 rgba(256,256,256, .35);
+	-webkit-box-shadow: inset 0 1px 0 rgba(256,256,256, .35);
+	box-shadow: inset 0 1px 0 rgba(256,256,256, .35);
+	background-color: #1c2107;
+	background-image: -moz-linear-gradient(top, rgb(226,238,175) 3%, rgb(188,216,77) 3%, rgb(144,176,38) 100%);
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(3%, rgb(226,238,175)), color-stop(3%, rgb(188,216,77)), color-stop(100%, rgb(144,176,38)));
+	background-image: -webkit-linear-gradient(top, rgb(226,238,175) 3%, rgb(188,216,77) 3%, rgb(144,176,38) 100%);
+	background-image: -o-linear-gradient(top, rgb(226,238,175) 3%, rgb(188,216,77) 3%, rgb(144,176,38) 100%);
+	background-image: -ms-linear-gradient(top, rgb(226,238,175) 3%, rgb(188,216,77) 3%, rgb(144,176,38) 100%);
+	background-image: linear-gradient(top, rgb(226,238,175) 3%, rgb(188,216,77) 3%, rgb(144,176,38) 100%);
+ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e2eeaf', endColorstr='#90b026', GradientType=0 );
+}
+.close_button {
+	position: absolute;
+	right: 1px;
+	cursor: pointer;
+	border: none;
+	margin-top: -30px;
+}

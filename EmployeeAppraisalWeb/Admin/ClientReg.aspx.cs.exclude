@@ -1,0 +1,179 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+using EmployeeAppraisalServiceReference;
+using System.Text;
+using System.Net.Mail;
+using System.Net;
+
+public partial class Admin_ClientReg : System.Web.UI.Page
+{
+    ServiceClient objClient = new ServiceClient();
+    protected void Page_Load(object sender, EventArgs e)
+    {
+        //Response.Write(Session["AdminID"]);
+        if (Session["AdminID"] == null)
+        {
+            Response.Redirect("Login.aspx");
+        }
+
+        var DC = new DataClassesDataContext();
+        tblAdmin AdminData = DC.tblAdmins.Single(ob => ob.AdminID == Convert.ToInt32(Session["AdminID"]));
+        if (AdminData.IsUpdate == false)
+        {
+            divPage.Visible = false;
+            divPage.Visible = true;
+        }
+
+        if (!IsPostBack)
+        {
+            BindData();
+            FillCountryDropDown();
+        }
+        else
+        {
+            //txtPassword.Text = ViewState["txtPassword"].ToString();
+        }
+
+        if (Request.QueryString["InquiryID"] != null)
+        {
+            var dc = new DataClassesDataContext();
+            tblInquiry Data = (from obj in dc.tblInquiries
+                               where obj.InquiryID == Convert.ToInt32(Request.QueryString["InquiryID"])
+                               select obj).Single();
+            txtname.Text = Data.Name;
+            txtCNO.Text = Data.ContactNo;
+            txtEmail.Text = Data.EmailID;
+        }
+
+    }
+
+    private void FillCountryDropDown()
+    {
+        ddCountryName.DataSource = objClient.GetCountry();
+        ddCountryName.DataValueField = "ID";
+        ddCountryName.DataTextField = "Name";
+        ddCountryName.DataBind();
+        ddCountryName.Items.Insert(0, new ListItem("Select a Country", ""));
+    }
+
+    private void BindData()
+    {
+        objClient.ClientRegBindData();
+    }
+
+    //Password Decrypt
+    private string Decryptdata(string encryptpwd)
+    {
+        string decryptpwd = string.Empty;
+        UTF8Encoding encodepwd = new UTF8Encoding();
+        Decoder Decode = encodepwd.GetDecoder();
+        byte[] todecode_byte = Convert.FromBase64String(encryptpwd);
+        int charCount = Decode.GetCharCount(todecode_byte, 0, todecode_byte.Length);
+        char[] decoded_char = new char[charCount];
+        Decode.GetChars(todecode_byte, 0, todecode_byte.Length, decoded_char, 0);
+        decryptpwd = new String(decoded_char);
+        return decryptpwd;
+    }
+
+    protected void btnInsert_Click(object sender, EventArgs e)
+    {
+        string Name = txtname.Text;
+        string ContactNo = txtCNO.Text;
+        string EmaiID = txtEmail.Text;
+        string Password = txtPassword.Text;
+        string CompanyName = txtComName.Text;
+        string WebsiteURL = txtComUrl.Text;
+        string Address = txtAddress.Text;
+        string Landmark = txtLandMark.Text;
+        int City = Convert.ToInt32(ddCityName.SelectedValue);
+        int Zipcode = Convert.ToInt32(txtZipCode.Text);
+
+        bool CheckEmail = objClient.EmailCkecking(txtEmail.Text, "");
+        if (CheckEmail == false)
+        {
+            errorEmail.Visible = false;
+        }
+        else
+        {
+            objClient.ClientRegistration(Name, EmaiID, Password, ContactNo, CompanyName, WebsiteURL, Address, Landmark, City, Zipcode, Convert.ToInt32(Session["AdminID"]));
+        }
+        //EmailSend To Client
+        var DC = new DataClassesDataContext();
+        IList<string> vc;
+        tblClient CID = (from obj in DC.tblClients
+                              orderby obj.ClientID descending
+                              select obj).First();
+        tblClient Client = ((from obj in DC.tblClients
+                        where obj.ClientID == CID.ClientID
+                        select obj).Single());
+        DateTime now = DateTime.Now;
+        MailMessage Msg = new MailMessage("trackmyworkindia@gmail.com", CID.EmailID);
+        Msg.Subject = "Client Registration";
+        Msg.Body = "<html><head></head><body><table><tr><td>Your E-Mail :</td><td>" + CID.EmailID + "</td><br></tr><tr><td>Your password :</td><td>" + Decryptdata(Client.Password) + "</td></tr></table></body></html>";
+        Msg.IsBodyHtml = true;
+
+        SmtpClient smtp = new SmtpClient();
+        smtp.Host = "smtp.gmail.com";
+        smtp.Port = 587;
+        smtp.UseDefaultCredentials = false;
+        smtp.EnableSsl = true;
+        smtp.DeliveryMethod = SmtpDeliveryMethod.Network;
+
+        NetworkCredential MyCredentials = new NetworkCredential("trackmyworkindia@gmail.com", "TMW2016open");
+        smtp.Credentials = MyCredentials;
+        smtp.Send(Msg);
+        vc = new string[] { Client.Password };
+
+        if (Request.QueryString["InquiryID"] != null)
+        {
+            tblInquiry data = (from ob in DC.tblInquiries
+                               where ob.InquiryID == Convert.ToInt32(Request.QueryString["InquiryID"])
+                               select ob).Single();
+            data.IsRead = true;
+            DC.SubmitChanges();
+
+            var ClientID = (from obj in DC.tblClients
+                            orderby obj.ClientID descending
+                            select obj.ClientID).First();
+            if (ClientID != 0)
+            {
+                Response.Redirect("Project.aspx?ClientInquiry=" + ClientID.ToString());
+            }
+        }
+        else
+        {
+            Response.Redirect("ClientReg.aspx");
+        }
+    }
+
+    protected void ddCountryName_SelectedIndexChanged(object sender, EventArgs e)
+    {
+        ddStateName.DataSource = objClient.GetState(Convert.ToInt32(ddCountryName.SelectedValue));
+        ddStateName.DataValueField = "ID";
+        ddStateName.DataTextField = "Name";
+        ddStateName.DataBind();
+        ddStateName.Items.Insert(0, new ListItem("Select a State", " "));
+    }
+
+    protected void ddStateName_SelectedIndexChanged(object sender, EventArgs e)
+    {
+        ddCityName.DataSource = objClient.GetCity(Convert.ToInt32(ddStateName.SelectedValue));
+        ddCityName.DataValueField = "ID";
+        ddCityName.DataTextField = "Name";
+        ddCityName.DataBind();
+        ddCityName.Items.Insert(0, new ListItem("Select a City", " "));
+    }
+
+    protected void txtEmail_TextChanged(object sender, EventArgs e)
+    {
+        bool CheckEmail = objClient.EmailCkecking(txtEmail.Text, "");
+        if (CheckEmail == false)
+        {
+            errorEmail.Visible = true;
+        }
+    }
+}
